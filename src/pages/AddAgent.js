@@ -7,13 +7,13 @@ import axios from "axios";
 
 export default function AddAgent(props) {
 
-    console.log(props.agent);
-    let [name, setName] = useState(props.agent === undefined ? '' : props.agent.name);
-    let [role, setRole] = useState(props.agent != undefined ? props.agent.role : '');
-    let [facebook, setFacebook] = useState(props.agent != undefined ? props.agent.facebook : '');
-    let [instagram, setInstagram] = useState(props.agent != undefined ? props.agent.instagram : '');
-    let [twitter, setTwitter] = useState(props.agent != undefined ? props.agent.twitter : '');
-    let [linkedIn, setLinkedIn] = useState(props.agent != undefined ? props.agent.linkedIn : '');
+    let [name, setName] = useState('');
+    let [role, setRole] = useState('');
+    let [facebook, setFacebook] = useState('');
+    let [instagram, setInstagram] = useState('');
+    let [twitter, setTwitter] = useState('');
+    let [linkedIn, setLinkedIn] = useState('');
+    let heading = 'Add New Agent';
 
     function submit(event) {
         event.preventDefault();
@@ -30,12 +30,12 @@ export default function AddAgent(props) {
 
         axios.post('http://localhost:4000/TeamMembers/create-teamMember', Agent)
                 .then(res => {alert("Agent added Successfully"); document.location.reload()})
-                .catch(res => alert("An unexpected Error occured: " + res.data));
+                .catch(res => alert("An unexpected error occured, make sure you filled all fields: " + res.data));
         }
 
     return (
         <div>
-            <h3 className='text-primary text-center mb-4 mt-3 mb-5'><strong>Add new Agent</strong></h3>
+            <h3 className='text-primary text-center mb-4 mt-3 mb-5'><strong> {heading}</strong></h3>
 
             <Form onSubmit={submit}>
                 <Form.Group as={Row} className="mb-3" >
