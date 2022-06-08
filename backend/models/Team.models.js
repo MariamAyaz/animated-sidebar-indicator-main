@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const TeamSchema = new Schema(
     {
         image: {type: String, required: true, minlength: 1},
+       
         
        
         name: {type:String, required: true, minlength:1 },
