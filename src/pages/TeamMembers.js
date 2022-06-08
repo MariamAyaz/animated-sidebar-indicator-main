@@ -106,6 +106,7 @@ const Agent = props =>
                 />
             </Col>
         </Form.Group>
+        
 
         <div className='text-center mt-4 mb-5'>
             <Link to={"../Admin/Edit/Agent/" + props.agent._id} className="btn ps-3 pe-3 btn-primary">
