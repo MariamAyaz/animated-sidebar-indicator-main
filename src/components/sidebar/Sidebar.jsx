@@ -22,10 +22,10 @@ const sidebarNavItems = [
         section: 'calendar'
     },
     {
-        display: 'User',
-        icon: <i className='bx bx-user'></i>,
-        to: '/user',
-        section: 'user'
+        display: 'Team Members',
+        icon: <i className='bx bx-group'></i>,
+        to: '/Admin/TeamMembers',
+        section: 'Team Members'
     },
     {
         display: 'Contact Information',
@@ -59,7 +59,7 @@ const Sidebar = () => {
 
     return <div className='sidebar'>
         <div className="sidebar__logo">
-           Dashboard
+            Dashboard
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
             <div

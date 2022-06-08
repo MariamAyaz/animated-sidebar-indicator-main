@@ -96,7 +96,7 @@ class ContactUs extends Component {
                 <h1 className='text-primary mb-5 text-center bg-white rounded p-4 me-5'>Contact Information</h1>
                 <div className=' ps-5 pt-5 pb-5 me-5 mb-5 bg-white rounded'>
 
-                    <h3 className='text-primary mb-5'>Address and Contact Information</h3>
+                    <h3 className='text-primary mt-4 mb-5'><strong>Address and Contact Information</strong></h3>
                     <React.Fragment>
                         <Form.Group as={Row} className="mb-3" >
                             <Form.Label column sm={3}>
@@ -152,7 +152,7 @@ class ContactUs extends Component {
                     </Form.Group>
 
 
-                    <h3 className='mb-4 text-primary mb-5 mt-5 '>Phone Numbers</h3>
+                    <h3 className='mb-4 text-primary mb-5 mt-5 '><strong>Phone Numbers</strong></h3>
                     <Form.Group as={Row} className="mb-3" >
                         <Form.Label column sm={3}>
                             <strong>
@@ -207,7 +207,7 @@ class ContactUs extends Component {
                         </Col>
                     </Form.Group>
 
-                    <h3 className='text-primary mb-4 mt-5'>Timing</h3>
+                    <h3 className='text-primary mb-4 mt-5'><strong>Timing</strong></h3>
                     <Row className="mb-5 ms-2">
                         <Form.Group as={Col} md={3} controlId="formGridCity">
                             <Form.Label>
@@ -247,7 +247,7 @@ class ContactUs extends Component {
                         </Form.Group>
                     </Row>
 
-                    <h3 className='text-primary mb-4 mt-5'>Social Media Links</h3>
+                    <h3 className='text-primary mb-4 mt-5'><strong>Social Media Links</strong></h3>
                     <Form.Group as={Row} className="mb-3" >
                         <Form.Label column sm={2}>
                             <strong>
