@@ -7,6 +7,7 @@ import Blank from './pages/Blank';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import TeamMembers from './pages/TeamMembers';
+import EditAgent from './pages/EditAgent';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                     <Route path='/Admin/started' element={<Blank />} />
                     <Route path='/Admin/AboutUs/edit' element={<AboutUs />} />
                     <Route path='/Admin/TeamMembers' element={<TeamMembers />} />
+                    <Route path='/Admin/Edit/Agent/:id' element={<EditAgent />} />
                     <Route path='/Admin/ContactUs/edit' element={<ContactUs />} />
                 </Route>
             </Routes>

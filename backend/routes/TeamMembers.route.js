@@ -87,7 +87,7 @@ router.delete("/delete-teamMember/:id", (req, res, next) => {
       return next(error);
     } else {
       res.status(200).json({
-        msg: data,
+        msg: "Agent removed successfully",
       });
     }
   });

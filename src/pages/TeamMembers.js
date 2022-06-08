@@ -4,6 +4,7 @@ import axios from 'axios';
 import { EditText, EditTextarea } from 'react-edit-text';
 import { Link } from 'react-router-dom';
 import AddAgent from './AddAgent';
+import EditAgent from './EditAgent';
 import 'react-edit-text/dist/index.css';
 
 const Agent = props =>
@@ -108,7 +109,7 @@ const Agent = props =>
         
 
         <div className='text-center mt-4 mb-5'>
-            <Link to={"/edit/" + props.agent._id} className="btn ps-3 pe-3 btn-primary">
+            <Link to={"../Admin/Edit/Agent/" + props.agent._id} className="btn ps-3 pe-3 btn-primary">
                 edit
             </Link>
             <a href="" onClick={() => { props.deleteAgent(props.agent._id); }} className="btn ps-2 pe-2 btn-primary ms-3">
@@ -148,7 +149,7 @@ export default class TeamMembers extends Component {
 
     deleteAgent(id) {
         axios.delete('http://localhost:4000/TeamMembers/delete-teamMember/' + id)
-            .then(res => alert(res.data))
+            .then(res => alert("Agent removed successfully"))
             .catch(res => alert(res.data));
         this.setState({
             Agents: this.state.Agents.filter(a => a._id !== id)   //To exclude exercise with given id from table (_id is field in DB)
@@ -168,7 +169,7 @@ export default class TeamMembers extends Component {
             <div>
                 <h1 className='text-primary mb-5 text-center bg-white rounded p-4 me-5 ps-5'>Team Members</h1>
                 <div className=' ps-5 pt-5 pb-5 me-5 mb-5 bg-white rounded'>
-                    <AddAgent/>
+                    <AddAgent />
                 </div>
 
                 <div className=' ps-5 pt-5 pb-5 me-5 mb-5 bg-white rounded'>
