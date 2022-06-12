@@ -135,7 +135,7 @@ class AboutUs extends Component {
                 <h1 className='text-primary mb-5 text-center bg-white rounded p-4 me-5'>About Us </h1>
                 <div className=' ps-5 pt-5 pb-5 me-5 mb-5 bg-white rounded'>
 
-                    <h3 className='text-primary mb-5'>About Us</h3>
+                    <h3 className='text-primary mb-5'><strong>About Us</strong></h3>
                     <React.Fragment>
 
                         <Form.Group as={Row} className="mb-3" >
@@ -293,7 +293,7 @@ class AboutUs extends Component {
                         </Col>
                     </Form.Group>
 
-                    <h3 className='text-primary mb-5 mt-5'>Services</h3>
+                    <h3 className='text-primary mb-5 mt-5'><strong>Services</strong></h3>
 
                     <Form.Group as={Row} className="mb-3" >
                         <Form.Label column sm={3}>
@@ -349,8 +349,8 @@ class AboutUs extends Component {
                         </Col>
                     </Form.Group>
 
-                    <h3 className='text-primary mb-4 mt-5'>Testimonials</h3>
-                    <h5 className='text-primary mb-4 mt-4'>Client 1</h5>
+                    <h3 className='text-primary mb-4 mt-5'><strong>Testimonials</strong></h3>
+                    <h5 className='text-primary mb-4 mt-4'><strong>Client 1</strong></h5>
 
                     <Form.Group as={Row} className="mb-3" >
                         <Form.Label column sm={3}>
@@ -405,7 +405,7 @@ class AboutUs extends Component {
                         </Col>
                     </Form.Group>
 
-                    <h5 className='text-primary mb-4 mt-4'>Client 2</h5>
+                    <h5 className='text-primary mb-4 mt-4'><strong>Client 2</strong></h5>
 
                     <Form.Group as={Row} className="mb-3" >
                         <Form.Label column sm={3}>
