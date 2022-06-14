@@ -2,24 +2,8 @@ let mongoose = require("mongoose"),
   express = require("express"),
   router = express.Router();
 
-const Team = require("../models/Team.models");
 // Team Member Model
 let TeamSchema = require("../models/Team.models");
-
-const cloudinary=require('cloudinary').v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
-const multer = require("multer");
-const path=require("path");
-const { resourceLimits } = require("worker_threads");
-
-//Cloudinary config
-cloudinary.config({ 
-  cloud_name: 'doud75rhx', 
-  api_key: '282528745991912', 
-  api_secret: 'KlOJ03_Co8_4hdaoihYF2-wX11E',
-  secure: true
-});
-
 
 
 // CREATE Team Member

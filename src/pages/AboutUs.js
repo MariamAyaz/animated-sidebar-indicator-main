@@ -135,7 +135,7 @@ class AboutUs extends Component {
                 <h1 className='text-primary mb-5 text-center bg-white rounded p-4 me-5'>About Us </h1>
                 <div className=' ps-5 pt-5 pb-5 me-5 mb-5 bg-white rounded'>
 
-                    <h3 className='text-primary mb-5'><strong>About Us</strong></h3>
+                    <h3 className='text-primary mb-5 mt-4'><strong>About Us</strong></h3>
                     <React.Fragment>
 
                         <Form.Group as={Row} className="mb-3" >

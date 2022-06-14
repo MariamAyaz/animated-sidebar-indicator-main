@@ -3,9 +3,6 @@ import { Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router';
 import axios from "axios";
-import 'console.image';
-
-
 
 
 export default function AddAgent(props) {
