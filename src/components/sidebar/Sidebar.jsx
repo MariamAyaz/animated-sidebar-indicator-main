@@ -16,10 +16,22 @@ const sidebarNavItems = [
         section: 'AboutUs'
     },
     {
-        display: 'Calendar',
-        icon: <i className='bx bx-calendar'></i>,
-        to: '/calendar',
-        section: 'calendar'
+        display: 'Properties',
+        icon: <i className='bx bx-building-house'></i>,
+        to: '/Admin/ForSaleProperties',
+        section: 'Property'
+    },
+    {
+        display: 'For Sale Properties',
+        icon: <i className='bx bx-chevrons-right'></i>,
+        to: '/Admin/ForSaleProperties',
+        section: 'Property'
+    },
+    {
+        display: 'For Rent Properties',
+        icon: <i className='bx bx-chevrons-right'></i>,
+        to: '/Admin/ForRentProperties',
+        section: 'Property'
     },
     {
         display: 'Team Members',

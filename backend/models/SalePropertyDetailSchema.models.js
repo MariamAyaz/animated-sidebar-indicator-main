@@ -6,9 +6,10 @@ const SalePropertyDetailSchema = new Schema(
     PropertyTitle: { type: String, minlength: 3, required: true },
     PropertyTagline: { type: String, minlength: 3, required: true },
     Address: { type: String, minlength: 5, required: true },
+    City: { type: String, minlength: 3, required: true },
     Price: { type: Number, minLength: 5, required: true },
     DatePosted: { type: Date, required: true },
-    Description: { type: String, minlength: 50, required: true },
+    Description: { type: String, minlength: 10, required: true },
     PropertyMapLocation: { type: String, required: true },
 
     MainImage: { type: String, required: true },

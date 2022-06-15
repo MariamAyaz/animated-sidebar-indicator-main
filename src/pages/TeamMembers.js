@@ -10,7 +10,7 @@ import 'react-edit-text/dist/index.css';
 const Agent = props =>
 (
     <div>
-        <h3 className='text-primary text-center mb-4 mt-4 mb-5'><strong>Agent</strong></h3>
+        <h3 className='text-primary text-center mb-4 mt-4 mb-5'><strong>Agent# {props.count}</strong></h3>
 
         <Form.Group as={Row} className="mb-3" >
             <Form.Label column sm={{ span: 3, offset: 1 }}>
@@ -152,16 +152,16 @@ export default class TeamMembers extends Component {
     }
 
 
-    componentDidMount()                                 //will run before the page is rendered and add the list of exercises to the state
+    componentDidMount()                                 
     {
         axios.get('http://localhost:4000/TeamMembers/')
             .then(response => {
                 this.setState({
-                    Agents: response.data                       //Get all fields of exercises and set it in exercises array 
+                    Agents: response.data                     
                 })
             })
             .catch((error) => {
-                console.log(error);
+                alert(error);
             })
     }
 
@@ -171,14 +171,15 @@ export default class TeamMembers extends Component {
             .then(res => alert("Agent removed successfully"))
             .catch(res => alert(res.data));
         this.setState({
-            Agents: this.state.Agents.filter(a => a._id !== id)   //To exclude exercise with given id from table (_id is field in DB)
+            Agents: this.state.Agents.filter(a => a._id !== id)   
         })
     }
 
-    AgentsList()                                               //This method iterates through the list of exercise items by using the map function. Each exercise item is output with the Exercise component. The current exercise item is assigned to the exercise property of this component.
+    AgentsList()                                               
     {
+        let count=0;
         return this.state.Agents.map(currentagent => {
-            return <Agent agent={currentagent} deleteAgent={this.deleteAgent} key={currentagent._id} />;
+            return <Agent agent={currentagent} deleteAgent={this.deleteAgent} key={currentagent._id} count={count++}/>;
         })
     }
     
